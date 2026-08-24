@@ -1,7 +1,7 @@
 name: bump
 
 # Keeps Formula/copilot-sessions.rb in step with the upstream releases of
-# ssmule/copilot-sessions. Without this the formula silently pins 1.0.0 forever
+# smaharajan/copilot-sessions. Without this the formula silently pins 1.0.0 forever
 # and every `brew install` hands out a stale build.
 #
 # The checksum is computed from the tarball this job has just downloaded, so the
@@ -33,7 +33,7 @@ jobs:
     runs-on: macos-latest
     env:
       GH_TOKEN: ${{ github.token }}
-      UPSTREAM: ssmule/copilot-sessions
+      UPSTREAM: smaharajan/copilot-sessions
       FORMULA: Formula/copilot-sessions.rb
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
@@ -89,10 +89,10 @@ jobs:
           # Homebrew will not install a formula given as a loose file path, so
           # the edited formula is dropped into a real tap and installed the way
           # a user would install it.
-          brew tap ssmule/tap
-          cp -f "$FORMULA" "$(brew --repository ssmule/tap)/Formula/"
-          brew install --build-from-source ssmule/tap/copilot-sessions
-          brew test ssmule/tap/copilot-sessions
+          brew tap smaharajan/tap
+          cp -f "$FORMULA" "$(brew --repository smaharajan/tap)/Formula/"
+          brew install --build-from-source smaharajan/tap/copilot-sessions
+          brew test smaharajan/tap/copilot-sessions
 
       - name: Commit
         if: steps.check.outputs.changed == 'true' && inputs.dry_run != true

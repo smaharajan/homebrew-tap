@@ -1,4 +1,4 @@
-# ssmule/homebrew-tap
+# smaharajan/homebrew-tap
 
 Homebrew formulae for my tools.
 
@@ -11,13 +11,13 @@ Install with the **full `owner/tap/formula` name** — that taps and installs in
 one step:
 
 ```bash
-brew install ssmule/tap/copilot-sessions
+brew install smaharajan/tap/copilot-sessions
 cs --version
 cs
 ```
 
 Upgrade with `brew update && brew upgrade copilot-sessions`, remove with
-`brew uninstall copilot-sessions` (and `brew untap ssmule/tap` to forget the
+`brew uninstall copilot-sessions` (and `brew untap smaharajan/tap` to forget the
 tap as well).
 
 ### Do not tap first
@@ -26,20 +26,20 @@ Homebrew 6 refuses to load a formula from a third-party tap you have not
 trusted, so the two-step everyone reaches for fails:
 
 ```console
-$ brew tap ssmule/tap && brew install copilot-sessions
-Error: Refusing to load formula ssmule/tap/copilot-sessions from untrusted tap ssmule/tap.
+$ brew tap smaharajan/tap && brew install copilot-sessions
+Error: Refusing to load formula smaharajan/tap/copilot-sessions from untrusted tap smaharajan/tap.
 ```
 
 The one-liner above is unaffected — naming the tap explicitly is itself the
 trust signal. To tap first anyway, trust it once:
 
 ```bash
-brew trust ssmule/tap
+brew trust smaharajan/tap
 brew install copilot-sessions
 ```
 
 The formula builds from the tagged release of
-[ssmule/copilot-sessions](https://github.com/ssmule/copilot-sessions), which has
+[smaharajan/copilot-sessions](https://github.com/smaharajan/copilot-sessions), which has
 **no runtime dependencies** — Python standard library only. Homebrew still
 installs it into its own virtualenv on `python@3.13`, so it never touches your
 system Python or your other environments.
