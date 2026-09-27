@@ -3,8 +3,8 @@ class CopilotSessions < Formula
 
   desc "Terminal browser for your GitHub Copilot CLI sessions"
   homepage "https://github.com/smaharajan/copilot-sessions"
-  url "https://github.com/smaharajan/copilot-sessions/archive/refs/tags/v1.1.0.tar.gz"
-  sha256 "78a5c320fb5adba73c9f382744dbe15089fede028b82388e48fa422b4d24a2da"
+  url "https://github.com/smaharajan/copilot-sessions/archive/refs/tags/v2.0.0.tar.gz"
+  sha256 "47730ab7ef796294aa3715c563a8f8014d54f462cf6451d6889f79b9a9c20af3"
   license "MIT"
 
   depends_on "python@3.13"
